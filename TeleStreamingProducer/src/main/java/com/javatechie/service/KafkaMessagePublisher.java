@@ -15,7 +15,7 @@ public class KafkaMessagePublisher {
     private KafkaTemplate<String,Object> template;
 
     public void sendMessageToTopic(String message){
-        CompletableFuture<SendResult<String, Object>> future = template.send("javatechie-demo2", message);
+        CompletableFuture<SendResult<String, Object>> future = template.send("Virendra-topicc-1", message);
         future.whenComplete((result,ex)->{
             if (ex == null) {
                 System.out.println("Sent message=[" + message +
@@ -30,7 +30,7 @@ public class KafkaMessagePublisher {
 
     public void sendEventsToTopic(Customer customer) {
         try {
-            CompletableFuture<SendResult<String, Object>> future = template.send("javatechie-demo", customer);
+            CompletableFuture<SendResult<String, Object>> future = template.send("Virendra-topicc-1", customer);
             future.whenComplete((result, ex) -> {
                 if (ex == null) {
                     System.out.println("Sent message=[" + customer.toString() +

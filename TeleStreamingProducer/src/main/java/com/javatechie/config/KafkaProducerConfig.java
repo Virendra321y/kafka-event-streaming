@@ -22,7 +22,7 @@ public class KafkaProducerConfig {
     @Bean
     public NewTopic createTopic(){
     	//this Bean use to create in a particular topic and how many partiasion do we nned to create we can create programatickly in kafak server
-        return new NewTopic("javatechie-demo", 3, (short) 1);
+        return new NewTopic("Virendra-topicc-1", 3, (short) 1);
     }
 
     /*

@@ -18,7 +18,7 @@ public class KafkaMessageListener {
      * If only one consumer is in the group (like here), it will receive all messages from all partitions.
      * To distribute the load, use multiple consumers in the same group, ideally matching the number of topic partitions.
      */
-    @KafkaListener(topics = "javatechie-demo",groupId = "jt-group")
+    @KafkaListener(topics = "Virendra-topicc-1",groupId = "jt-group")
     public void consumeEvents(Customer customer) {
         log.info("consumer consume the events {} ", customer.toString());
     }
