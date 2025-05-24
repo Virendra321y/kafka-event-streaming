@@ -18,6 +18,10 @@ import java.util.Map;
 public class KafkaConsumerConfig {
 
 
+	/*
+     * here programaticly we are doing JsonDeserializer we no need to do configuration in .yml file 
+     * because that is not too good for complex configuration in .yml file we need to do this programatickly 
+     */
     @Bean
     public Map<String, Object> consumerConfig() {
         Map<String, Object> props = new HashMap<>();

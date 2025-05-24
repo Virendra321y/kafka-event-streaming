@@ -16,11 +16,19 @@ import java.util.Map;
 @Configuration
 public class KafkaProducerConfig {
 
+	/*
+	 * we create this config to create programmatically to avoid manual creation any topic or any
+	 */
     @Bean
     public NewTopic createTopic(){
+    	//this Bean use to create in a particular topic and how many partiasion do we nned to create we can create programatickly in kafak server
         return new NewTopic("javatechie-demo", 3, (short) 1);
     }
 
+    /*
+     * here programaticly we are doing String Serializer we no need to do configuration in .yml file 
+     * because that is not too good for complex configuration in .yml file we need to do this programatickly 
+     */
     @Bean
     public Map<String,Object> producerConfig(){
         Map<String,Object> props=new HashMap<>();
